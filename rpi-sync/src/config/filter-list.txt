@@ -4,5 +4,4 @@
 # exclude files/folders with -
 #
 # ignore the utility folder for mountcheck  
-- /RPI-DONT-DELETE/**
 
