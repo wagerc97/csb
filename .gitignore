@@ -1,2 +1,9 @@
 # gitignore file these files will not be synced
-/notes
+
+# standard
+*/notes
+*/dump
+*/test
+
+# dont sync any logfiles 
+*/logs/*
