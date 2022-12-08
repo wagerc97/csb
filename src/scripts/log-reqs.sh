@@ -6,7 +6,7 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 ############ Define Variables ###########
 
 # import environment variables
-source ~/cloud-storage-backup/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=0.5

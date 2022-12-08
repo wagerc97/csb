@@ -37,6 +37,9 @@ printf_current_timestamp() {
 
 # pull from repo
 
+# create all logs folders 
+
+
 # give permissions
 #$ chmod -R +x ~/cloud-storage-backup/
 

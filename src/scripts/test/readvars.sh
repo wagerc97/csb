@@ -4,7 +4,7 @@
 # source runs the files content and updates your workspace environment with it
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 
-source ~/cloud-storage-backup/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.txt
 
 echo "project dir von envonfig.txt: $PROJECTDIR"
 

@@ -25,7 +25,7 @@ echo $(basename "$0") "|" $TIMESTAMP
 ############ Define Variables ###########
 
 # import environment variables
-source ~/cloud-storage-backup/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=1

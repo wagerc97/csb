@@ -17,7 +17,7 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables
-source ~/cloud-storage-backup/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.txt
 
 # log rclone copy to seperate file if TRUE
 if [ $LOGBACKUP -eq 0 ]; then

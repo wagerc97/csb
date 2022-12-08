@@ -7,7 +7,7 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables (not required for check-web.sh)
-source ~/cloud-storage-backup/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.txt
 
 ONLINE=1 # false by default
 INTERVAL=10
