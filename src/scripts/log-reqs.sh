@@ -22,6 +22,15 @@ printf_current_timestamp() {
 	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 }
 
+ensure_logfolder_structure() {
+	# ensure log folders exists otherwise create it
+	printf_current_timestamp
+	echo " [NOTICE ] Ensure all log folders exist "
+	mkdir -pv $PROJECTLOGS
+	mkdir -pv $PROJECTLOGSCONTROL/systemcheck
+	mkdir -pv $PROJECTLOGSSINGLE/log-reqs
+	sleep $SMALLTIMEOUT
+}
 #########################################
 
 ### Check if each log folders for all scripts exist
@@ -29,10 +38,9 @@ printf_current_timestamp() {
 printf_current_timestamp
 echo " [NOTICE ] Checking if log folder for all scripts exist "
 
-# Build the logs folder structure
-mkdir -pv $PROJECTLOGS
-mkdir -pv $PROJECTLOGSSINGLE
-mkdir -pv $PROJECTLOGSCONTROL
+# Ensure log folders exist otherwise create them
+ensure_logfolder_structure
+
 
 
 # Each of the names will be folder. Add new required folders at the end of the list.

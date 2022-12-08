@@ -41,6 +41,17 @@ printf_current_timestamp() {
 	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 }
 
+ensure_logfolder_structure() {
+	# ensure log folders exists otherwise create it
+	printf_current_timestamp
+	echo " [NOTICE ] Ensure all log folders exist "
+	mkdir -pv $PROJECTLOGS
+	mkdir -pv $PROJECTLOGSCONTROL/systemcheck
+	mkdir -pv $PROJECTLOGSSINGLE/log-reqs
+	sleep $SMALLTIMEOUT
+}
+
+
 call_bash_script () {
 	# This function calls a BASH script and logs to output to a new file called <script_name>-<timestamp>.log
 	#
@@ -99,6 +110,9 @@ printf_current_timestamp
 echo " [NOTICE ] main.sh will log to $PROJECTLOGSCONTROL/main/main-<timestamp>.log. Look up this logfile for further details. "
 printf_current_timestamp
 echo " [NOTICE ] Copy details are logged to $PROJECTLOGSSINGLE/backup/copy_details-<timestamp>.log "
+
+# Ensure log folders exist otherwise create them
+ensure_logfolder_structure
 
 
 ########################################################################
