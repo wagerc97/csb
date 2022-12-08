@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=2
@@ -62,7 +62,7 @@ else
 		printf_current_timestamp
 		echo " [F ERROR] Log folder could not be created "
 		echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-		echo "-----------------------------------[ RPI-SYNC ]-------------------------------"
+		echo "-----------------------------------[ CSB  ]-------------------------------"
 		#echo $(date +"%Y-%m-%dT%H:%M:%S.%3N") " [NOTICE ] waiting for $BIGTIMEOUT seconds ..."
 		#sleep $BIGTIMEOUT
 		EXITCODE=1
@@ -164,7 +164,7 @@ if [ $EXITCODE -ne 0 ]; then
 fi
 
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 #echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") [NOTICE ] waiting for $BIGTIMEOUT seconds ..."
 #sleep $BIGTIMEOUT
 exit $EXITCODE

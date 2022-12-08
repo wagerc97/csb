@@ -1,20 +1,20 @@
 #!/bin/bash
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # process variables
-SMALLTIMEOUT=2
-BIGTIMEOUT=20
-EXITCODE=2
+SMALLTIMEOUT=1
+BIGTIMEOUT=3
+EXITCODE=1
 USBMOUNTED=1  # false by default
 ATTEMPTS=10
-INTERVAL=10
+INTERVAL=5
 i=1
 echo ""
 #########################################
@@ -31,7 +31,7 @@ printf_current_timestamp() {
 printf_current_timestamp
 echo " [NOTICE ] Check if USB storage is installed "
 printf_current_timestamp
-echo " [NOTICE ] Search in location $USBMOUNTDIR for file $MOUNTCHECK "
+echo " [NOTICE ] Check if $USBMOUNTDIR is compatible and not empty "
 printf_current_timestamp
 echo " [NOTICE ] Checking for $ATTEMPTS times every $INTERVAL seconds until successful "
 
@@ -54,15 +54,17 @@ while [ $i -le $ATTEMPTS ]; do
 		echo " [NOTICE ] Retry in $INTERVAL seconds... "
 		sleep $INTERVAL
 	fi
-
+	
+	# Copy a temporary checkfile on usb storage
+	printf_current_timestamp
+	echo " [NOTICE ] Transfer file on local external storage device "
+	cp -v $USBCHECKFILE $USBMOUNTDIR
+	sleep $BIGTIMEOUT
 
 	# CHECK
 	#if [ -f $USBMOUNTDIR/$MOUNTCHECK ]; then
-	if [ ! -n "$(find "USBMOUNTDIR" -maxdepth 0 -type d -empty 2>/dev/null)" ]; then
-		printf_current_timestamp
-		echo " [SUCCESS] USB storage '$USBMOUNTDIR' mounted correctly "
+	if [ ! -n "$(find "$USBMOUNTDIR" -maxdepth 0 -type d -empty 2>/dev/null)" ]; then
 		EXITCODE=0
-		break	
 	else 	
 		printf_current_timestamp
 		echo " [WARNING] USB storage not found yet "
@@ -70,9 +72,20 @@ while [ $i -le $ATTEMPTS ]; do
 		((i++)) # increment iterator
 	fi
 	
+	# Remove the file again from USB storage
+	printf_current_timestamp
+	printf " [NOTICE ] Delete checkfile again: "
+	find $USBMOUNTDIR -mindepth 0 -mtime -1 -type f -name $CHECKFILENAME -print -delete
+	sleep $BIGTIMEOUT
+	
+	# Break loop if successful
+	if [ $EXITCODE -eq 0 ]; then 
+		printf_current_timestamp
+		echo " [SUCCESS] USB storage '$USBMOUNTDIR' mounted correctly "
+		break
+	fi
 	
 done #while-loop
-sleep 1
 	
 
 # FINAL OUTPUT
@@ -86,9 +99,8 @@ if [ $EXITCODE -gt 0 ]; then
 fi
 	
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
-#"$(date +"%Y-%m-%dT%H:%M:%S.%3N") [NOTICE ] waiting for $BIGTIMEOUT seconds ..."
-#sleep $BIGTIMEOUT
+echo "------------------------------------[ CSB  END ]--------------------------------"
+
 exit $EXITCODE
 
 

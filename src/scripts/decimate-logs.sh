@@ -3,20 +3,20 @@
 #-----------------------------------------------------------------------------------------#
 # This bash script will delete all logfiles older than the specified date.
 # Usage: This file will be called routinely by a cronjob. Otherwise the RPI internal storage will run full with logfiles. 
-# Part of the "rpi-sync" project
+# Part of the "cloud-storage-backup" project
 # Author: Clemens Wager
 # Last revisited: 2022-12-06
 #-----------------------------------------------------------------------------------------#
 
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 echo ""
 
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=2
@@ -58,7 +58,7 @@ find $PROJECTLOGS -mindepth 1 -maxdepth 3 -mtime +$MAXAGE -type f -name \*.log -
 echo ""
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Done "
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 #"$(date +"%Y-%m-%dT%H:%M:%S.%3N") [NOTICE ] waiting for $BIGTIMEOUT seconds ..."
 #sleep $BIGTIMEOUT
 exit $EXITCODE

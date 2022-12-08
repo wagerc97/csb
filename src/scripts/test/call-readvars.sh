@@ -5,7 +5,7 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 echo ""
 
 # source runs the files content and updates your workspace environment with it
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 echo "project dir von envonfig.txt: $PROJECTDIR"
 echo "project scripts von envonfig.txt: $PROJECTSCRIPTS"

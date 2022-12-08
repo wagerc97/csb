@@ -6,7 +6,7 @@ INSTALLATION.txt
 -----------------------------------------
 
 
-This is the installation guide for the RPI SYNC PROJECT. If you're 
+This is the installation guide for the CLOUD-STORAGE-BACKUP (CSB) PROJECT. If you're 
 reading this, you've probably just installed the project 
 on your system and want to install it.
 
@@ -16,7 +16,7 @@ What should I do next?
 There are a view configurations required to use this installation.
 I will explain them in chronological order. 
 
-1.  Ensure rpi-sync folder is located in your home directory. 
+1.  Ensure cloud-storage-backup folder is located in your home directory. 
     This directory is typically called '/home/<username>' and 
     called '~' in short. 
     
@@ -34,7 +34,7 @@ I will explain them in chronological order.
     I recommend following these steps closely to avoid future troubles the following parameters 
     during rclone configuration to be able to use most of the default environment variables. 
     Change the environment variables. Only two values necessary by default. The file holding all 
-    environment variables is located under '~/rpi-sync/src/config/envconfig.txt'. 
+    environment variables is located under '~/cloud-storage-backup/src/config/envconfig.txt'. 
     
     - When asked to enter a name for new remote, you can chose any name you like. Also enter this 
       name in the variable REMOTECONFIG.
@@ -59,7 +59,7 @@ I will explain them in chronological order.
 What do I do if it doesn't work?
 --------------------------------
 
- 1. Read the logfiles located under '~/rpi-sync/logs/'. You will most likely be looking in 
+ 1. Read the logfiles located under '~/cloud-storage-backup/logs/'. You will most likely be looking in 
     control directory. 
  2. Only after 1. call Clemens Wager or write an Email to wagerc-dev@outlook.com 
     (I may or may not read it)

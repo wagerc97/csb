@@ -3,13 +3,13 @@
 #-----------------------------------------------------------------------------------------#
 # This bash script will copy all files on the remote storage (onedrive) that have changed to a local directory
 # Dieses bash Skript kopiert alle Datein, die verändert wurden, auf ein lokales Speichermedium (USB-stick, externe Festplatte, ... was auch immer konfiguriert wurde -> DESTDIR)
-# Part of the "rpi-sync" project
+# Part of the "cloud-storage-backup" project
 # Author: Clemens Wager
 # Last revisited: 2022-12-04
 #-----------------------------------------------------------------------------------------#
 
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 echo ""
 
@@ -17,7 +17,7 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # log rclone copy to seperate file if TRUE
 if [ $LOGBACKUP -eq 0 ]; then
@@ -84,7 +84,7 @@ echo " [NOTICE ]  Calling rclone copy ... "
 # --ignore-case 				to match without case sensitivity 
 # --transfers=4 				number of files tranferred in parallel (default 4). Increase on stable connection, decrease on slow connection and weak backend. 16 had best results during test on RPI
 # --log-file=$COPYLOGFILE		logs to file 
-# --fast-list 					for large sync operations, uses more RAM (~4GB on this RPI)
+# --fast-list 					for large sync/copy operations, uses more RAM (~4GB on this RPI)
 # --checksum					rclone will check the file hash and size to determine if files are equal (instead of just file size)
 
 # CHECK THESE FLAGS OUT
@@ -112,7 +112,7 @@ echo " [NOTICE ] Rclone copy finished! For further information read the log: $CO
 
 
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 
 # for debugging
 #echo "start time: $ts"

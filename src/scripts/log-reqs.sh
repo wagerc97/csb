@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=0.5
@@ -93,7 +93,7 @@ echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Done "
 printf_current_timestamp
 echo " [NOTICE ] $EXITCODE of $NUMFOLDER necessary logfolders caused problems "
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 exit $EXITCODE
 
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 echo ""
 
 ############ Define Variables ###########
 
 # import environment variables (not required for check-web.sh)
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 ONLINE=1 # false by default
 INTERVAL=10
@@ -90,7 +90,7 @@ if [ $EXITCODE -gt 0 ]; then
 fi
 
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 #echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") [NOTICE ] waiting for $BIGTIMEOUT seconds ..."
 #sleep $BIGTIMEOUT
 exit $EXITCODE

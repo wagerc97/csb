@@ -5,7 +5,7 @@ MANUAL.txt
 2) Deutsche Version weiter unten 
 -----------------------------------------
 
-This is the manual for the RPI SYNC PROJECT. If you're 
+This is the manual for the CLOUD-STORAGE-BACKUP (CSB) PROJECT. If you're 
 reading this, you've probably just installed and configured the project 
 on your system. Now you can use the project. 
 
@@ -26,7 +26,7 @@ There are a view possibilities:
 
 !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!
 
-  Do not execute the rpi-sync scripts while other rpi-sync scripts are running. 
+  Do not execute the cloud-storage-backup scripts while other cloud-storage-backup scripts are running. 
   Whether it is because you started them twice or because a cronjob started automatically. 
   The resulting behaviour was not tested and I won't take responsibility for the outcome. 
 
@@ -36,7 +36,7 @@ There are a view possibilities:
 
 @ONDEMAND:
 
-    Start one of the scripts in '~/rpi-sync/src/scripts/control' which carries out the 
+    Start one of the scripts in '~/cloud-storage-backup/src/scripts/control' which carries out the 
     required procedure. All controlling scripts are well explained inside. 
     (I don't recommend using any of the other scripts by themselves)
 
@@ -51,7 +51,7 @@ There are a view possibilities:
 @MAINTENANCE:
     
     You can perform system checks to see whether the installation is ready for your next 
-    backup process. In this case run '~/rpi-sync/src/scripts/control/system-check-for-backup.sh'
+    backup process. In this case run '~/cloud-storage-backup/src/scripts/control/system-check-for-backup.sh'
     This will basically execute all scripts except the backup.sh itself.
     
 
@@ -70,7 +70,7 @@ Allthough not the complete remote storage directory is saved.
 What do I do if it doesn't work?
 --------------------------------
 
- 1. Read the logfiles located under '~/rpi-sync/logs/'. You will most likely be looking in 
+ 1. Read the logfiles located under '~/cloud-storage-backup/logs/'. You will most likely be looking in 
     control directory. 
  2. Only after 1. call Clemens Wager or write an Email to wagerc-dev@outlook.com 
     (I may or may not read it)

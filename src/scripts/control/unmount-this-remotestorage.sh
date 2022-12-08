@@ -6,19 +6,19 @@
 # Dieses bash Skript überprüft die Verbindung zum externen Speicher (USB-Stick), zum Internet.
 # Dann wird der onedrive verbunden (rlcone stellt eine Verbindung zur Cloud her).
 #
-# Part of the "rpi-sync" project
+# Part of the "cloud-storage-backup" project
 # Author: Clemens Wager
 # Last revisited: 2022-12-06
 #-----------------------------------------------------------------------------------------#
 
 
-echo "-----------------------------------[ RPI-SYNC START ]-------------------------------"
+echo "-----------------------------------[ CSB  START ]-------------------------------"
 echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 
 ############ Define Variables ###########
 
 # import environment variables
-source ~/rpi-sync/src/config/envconfig.txt
+source ~/cloud-storage-backup/src/config/envconfig.txt
 
 # process variables
 SMALLTIMEOUT=2
@@ -65,7 +65,7 @@ else
 fi
 
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Bye "
-echo "------------------------------------[ RPI-SYNC END ]--------------------------------"
+echo "------------------------------------[ CSB  END ]--------------------------------"
 
 echo ""
 read -r -p  "Press RETURN to continue ... " INPUT

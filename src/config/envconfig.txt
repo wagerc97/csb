@@ -1,8 +1,8 @@
 ##################################################################################
 # envconfig.txt
-# This file stores environment variables for the rpi-sync project
+# This file stores environment variables for the cloud-storage-backup (CSB) project
 # Usage:
-#  - import variables with 'source ~/rpi-sync/src/config/envconfig.txt'
+#  - import variables with 'source ~/cloud-storage-backup/src/config/envconfig.txt'
 #	 (bash will run this file like a .sh file and thus create the variables and 
 #    also execute everything that is written here)
 #  - variables that are defined here can then be used normally 
@@ -90,7 +90,7 @@ RCLONECONFIG=~/.config/rclone/rclone.conf
 #############
 
 # location of project root
-PROJECTDIR=~/rpi-sync
+PROJECTDIR=~/cloud-storage-backup
 
 # location of project scripts
 PROJECTRESOURCES=$PROJECTDIR/resources
@@ -105,7 +105,7 @@ PROJECTSCRIPTS=$PROJECTSRC/scripts
 PROJECTCONFIG=$PROJECTSRC/config
 
 # location of project logs
-PROJECTLOGS=~/rpi-sync/logs
+PROJECTLOGS=$PROJECTDIR/logs
 
 # location of project logs for smaller scripts
 PROJECTLOGSSINGLE=$PROJECTLOGS/single
