@@ -16,9 +16,14 @@ What should I do next?
 There are a view configurations required to use this installation.
 I will explain them in chronological order. 
 
-1.  Ensure cloud-storage-backup folder is located in your home directory. 
+1.  Ensure the cloud-storage-backup root folder is located in your home directory. 
     This directory is typically called '/home/<username>' and 
     called '~' in short. 
+    Other wise download it from GitHub 
+    $ git clone https://github.com/wagerc97/cloud-storage-backup.git
+    Do not forget to give the downloaded scripts the permission to be executed. 
+    (this command will allow execution of all files in the directory recursively)
+    $ chmod -R +x ~/cloud-storage-backup/
     
 2.  Install rclone on your system (in case you do not have it installed or
     if this project installation does not do it for you automatically)

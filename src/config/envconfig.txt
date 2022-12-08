@@ -90,7 +90,8 @@ RCLONECONFIG=~/.config/rclone/rclone.conf
 #############
 
 # location of project root
-PROJECTDIR=~/cloud-storage-backup
+#PROJECTDIR=~/cloud-storage-backup
+PROJECTDIR=~/csb
 
 # location of project scripts
 PROJECTRESOURCES=$PROJECTDIR/resources
