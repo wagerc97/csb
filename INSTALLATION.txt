@@ -22,6 +22,7 @@ I will explain them in chronological order.
     
 2.  Install rclone on your system (in case you do not have it installed or
     if this project installation does not do it for you automatically)
+    I recommend the installation via this repo: https://github.com/pageauc/rclone4pi
     Further information here: https://linuxhint.com/set-up-rclone-raspberry-pi/
     
 3.  Configure rclone for your remote storage. This can be done by calling 
