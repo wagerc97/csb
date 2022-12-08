@@ -29,6 +29,8 @@ printf_current_timestamp() {
 printf_current_timestamp
 echo " [NOTICE ] Checking if log folder for all scripts exist "
 
+# Build the logs folder structure
+mkdir -pv $PROJECTLOGS
 mkdir -pv $PROJECTLOGSSINGLE
 mkdir -pv $PROJECTLOGSCONTROL
 
