@@ -6,4 +6,5 @@
 */test
 
 # dont sync any logfiles 
-*/logs/*
+*/logs/control/*
+*/logs/single/*

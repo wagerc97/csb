@@ -29,6 +29,10 @@ printf_current_timestamp() {
 printf_current_timestamp
 echo " [NOTICE ] Checking if log folder for all scripts exist "
 
+mkdir -pv $PROJECTLOGSSINGLE
+mkdir -pv $PROJECTLOGSCONTROL
+
+
 # Each of the names will be folder. Add new required folders at the end of the list.
 for eachfolder in check-web check-usb unmount mount backup ; do
 
