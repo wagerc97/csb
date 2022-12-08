@@ -55,6 +55,33 @@ for eachfolder in check-web check-usb unmount mount backup ; do
 	
 done #end for loop
 
+for eachfolder in systemcheck main daily ondemand reboot ; do
+
+	if [ -d $PROJECTLOGSCONTROL/$eachfolder ]; then
+		printf_current_timestamp
+		echo " [SUCCESS] Log folder for '$eachfolder' exist "
+		
+	else
+		printf_current_timestamp
+		echo " [WARNING] Log folder for '$eachfolder' does not exist. Creating folder... "
+		mkdir -pv $PROJECTLOGSCONTROL/$eachfolder
+
+		if [ -d $PROJECTLOGSCONTROL/$eachfolder ]; then
+			printf_current_timestamp
+			echo " [SUCCESS] Log folder for '$eachfolder' was created "
+		else 
+			printf_current_timestamp
+			echo " [F ERROR] Log folder for '$eachfolder' could not be created "
+			((EXITCODE++))
+		fi
+	fi		
+	
+	sleep $SMALLTIMEOUT
+	
+done #end for loop
+
+
+
 echo "$(date +"%Y-%m-%dT%H:%M:%S.%3N") | Done "
 
 printf_current_timestamp
