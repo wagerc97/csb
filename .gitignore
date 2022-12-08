@@ -8,3 +8,5 @@
 # dont sync any logfiles 
 */logs/control/*
 */logs/single/*
+
+#
