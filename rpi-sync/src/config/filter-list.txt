@@ -1,0 +1,8 @@
+# filter-list.txt
+# enter foldernames and filenames that rclone copy should ignore
+# include files/folders with +
+# exclude files/folders with -
+#
+# ignore the utility folder for mountcheck  
+- /RPI-DONT-DELETE/**
+
