@@ -38,7 +38,7 @@ ensure_logfolder_structure () {
 	sleep 1
 
 	printf_current_timestamp
-  echo " [NOTICE ] Modify execution permissions of CSB log folders"
+  echo " [NOTICE ] Modify permissions for CSB log folders"
  	chmod -R +x ~/csb/logs/
 
 }
