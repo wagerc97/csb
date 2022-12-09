@@ -13,7 +13,7 @@ Use for example cronjobs to trigger the according scripts (see [manual](/howto/M
 There is an [example crontab file](/src/maintenance/example-crontab.txt) with recommended cronjobs.  
 You will need: 
 - linux server
-- [Rclone installation](https://rclone.org/downloads/)
+- [Rclone installation](https://rclone.org/install/)
 - cronjob configuration
 
 More details about the installation of the CSB service can be read in the [installation](/howto/INSTALLATION.txt).
@@ -21,13 +21,12 @@ More details about the installation of the CSB service can be read in the [insta
 Note: This service was originally developed for Raspberry Pi. But any Linux/Unix system should be able to use it as intended.
 
 ## Quick Install
-__Step 1:__ Highlight and copy the command below.  
-__Step 2:__ Paste the command in a terminal session on your server and execute.  
+__Step 1:__ Highlight and copy the command below.    
+__Step 2:__ Paste the command in a terminal session on your server and execute.   
+``cd ~ | git clone https://github.com/wagerc97/cloud-storage-backup.git``  
 
-``git clone https://github.com/wagerc97/cloud-storage-backup.git``  
-
-__Step 3:__ install rclone in your home directory   
-__Step 4:__ configure CSB installation acoording to manual   
+__Step 3:__ [install Rclone](https://rclone.org/install/) in your home directory     
+__Step 4:__ configure CSB installation according to [manual](/howto/MANUAL.txt)   
 
 ## Details
 ### Developed with focus on:
