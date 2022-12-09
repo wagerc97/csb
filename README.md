@@ -32,7 +32,9 @@ __Step 2:__ Paste the command in a terminal session on your server and execute.
 - good documentation
 - easy configuration
 
-### About [Rclone](https://rclone.org/#about) <img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="250" height="100" >
+__Check out the detailed [script documentation](/src/scripts/control) for each service to learn more!__
+
+### About [Rclone](https://rclone.org/#about) <img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="220" height="100" >
 
 [Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines Rclone as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)"  
 
