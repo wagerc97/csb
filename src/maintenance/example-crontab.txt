@@ -27,10 +27,10 @@
 @reboot bash ~/csb/src/scripts/control/reboot-call-main.sh
 
 # Hourly job 
-0 * * * * bash ~/csb/src/scripts/control/daily-call-main.sh
+#0 * * * * bash ~/csb/src/scripts/control/daily-call-main.sh
 
 # Daily job at 03:00 every night
-#0 3 * * * bash ~/rpi-sync/src/scripts/control/daily-call-main.sh
+0 3 * * * bash ~/csb/src/scripts/control/daily-call-main.sh
 
 # Weekly job on Friday 00:01 at night
 1 0 * * 5 bash ~/csb/src/scripts/decimate-logs.sh
