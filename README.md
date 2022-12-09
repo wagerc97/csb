@@ -24,7 +24,8 @@ Note: This service was originally developed for Raspberry Pi. But any Linux/Unix
 __Step 1:__ Highlight and copy the command below.  
 __Step 2:__ Paste the command in a terminal session on your server and execute.  
 
-``git clone https://github.com/wagerc97/cloud-storage-backup.git``
+``git clone https://github.com/wagerc97/cloud-storage-backup.git``  
+
 __Step 3:__ install rclone in your home directory   
 __Step 4:__ configure CSB installation acoording to manual   
 
