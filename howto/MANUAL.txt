@@ -57,6 +57,9 @@ There are a view possibilities:
        $ ~/csb/src/maintenance/update-csb.sh
        This script deletes the CSB installation and clones the uptodate version from wagerc97 GitHub repo.
        CAUTION: you will need to reconfigure a view environment variables afterwards.
+    3) I highly recommend to implementing a scheduled task (i.e. Cronjob) to delete old logs.
+       Just for this issue the script '/src/scripts/decimate-logs.sh' was written. Also, there is a variable in
+       envconig.sh called 'MAXAGE=30' that indicates after how many days a logfile shall be deleted.
 
 
 # CAUTION!
