@@ -25,7 +25,8 @@ echo $(basename "$0") "|" $TIMESTAMP
 ############ Define Variables ###########
 
 # import environment variables
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # process variables
 SMALLTIMEOUT=1
@@ -34,21 +35,6 @@ EXITCODE=0
 echo ""
 #########################################
 ############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
-ensure_logfolder_structure() {
-	# ensure log folders exists otherwise create it
-	printf_current_timestamp
-	echo " [NOTICE ] Ensure all log folders exist "
-	mkdir -pv $PROJECTLOGS
-	mkdir -pv $PROJECTLOGSCONTROL/systemcheck
-	mkdir -pv $PROJECTLOGSSINGLE/log-reqs
-	sleep $SMALLTIMEOUT
-}
 
 call_bash_script () {
 	# This function calls a BASH script and logs to output to a new file called <script_name>-<timestamp>.log
@@ -91,32 +77,6 @@ call_bash_script_and_log_centrally () {
 	tscut=$(echo "$TIMESTAMP" |cut -d'.' -f1)
 	# execute the script and log its output
 	$PROJECTSCRIPTS/$script.sh >> $PROJECTLOGSCONTROL/main/main-$tscut.log 2>&1
-
-}
-
-process_script_exitcode () {
-	# This function processes the exitcode of the last script execution
-	#
-	# Use it directly after the script execution as follows:
-	#	process_script_exitcode $?
-	#
-	# Parameters: 
-	#	the exitcode returned from script execution
-	
-	res=$1  # store the first parameters in a variable name 
-	
-	if [ $res -ne 0 ]; then 
-		printf_current_timestamp
-		echo " [ ERROR ]  returned exitcode $res "
-		((EXITCODE++))  # Update exitcode
-		printf_current_timestamp
-		echo " [ ERROR ]  updated main-EXITCODE $EXITCODE "
-	else 
-		printf_current_timestamp
-		echo " [SUCCESS]  returned exitcode $res "
-	fi 
-	
-	sleep $SMALLTIMEOUT
 
 }
 

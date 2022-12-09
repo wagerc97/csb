@@ -6,7 +6,8 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 ############ Define Variables ###########
 
 # import environment variables
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # process variables
 SMALLTIMEOUT=0.5
@@ -14,23 +15,6 @@ BIGTIMEOUT=10
 EXITCODE=0
 NUMFOLDER=7
 echo ""
-#########################################
-############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
-ensure_logfolder_structure() {
-	# ensure log folders exists otherwise create it
-	printf_current_timestamp
-	echo " [NOTICE ] Ensure all log folders exist "
-	mkdir -pv $PROJECTLOGS
-	mkdir -pv $PROJECTLOGSCONTROL/systemcheck
-	mkdir -pv $PROJECTLOGSSINGLE/log-reqs
-	sleep $SMALLTIMEOUT
-}
 #########################################
 
 ### Check if each log folders for all scripts exist

@@ -7,7 +7,8 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables (not required for check-web.sh)
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 ONLINE=1 # false by default
 INTERVAL=10
@@ -16,14 +17,6 @@ SMALLTIMEOUT=3
 BIGTIMEOUT=10
 EXITCODE=2
 i=1
-#########################################
-############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
 #########################################
 
 

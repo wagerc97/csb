@@ -5,7 +5,8 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 echo ""
 
 # source runs the files content and updates your workspace environment with it
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 echo "project dir von envonfig.txt: $PROJECTDIR"
 echo "project scripts von envonfig.txt: $PROJECTSCRIPTS"

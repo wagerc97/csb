@@ -16,20 +16,13 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # process variables
 SMALLTIMEOUT=2
 BIGTIMEOUT=20
 EXITCODE=0
-#########################################
-############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
 #########################################
 
 

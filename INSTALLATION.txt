@@ -39,7 +39,7 @@ I will explain them in chronological order.
     I recommend following these steps closely to avoid future troubles the following parameters 
     during rclone configuration to be able to use most of the default environment variables. 
     Change the environment variables. Only two values necessary by default. The file holding all 
-    environment variables is located under '~/cloud-storage-backup/src/config/envconfig.txt'. 
+    environment variables is located under '~/cloud-storage-backup/src/config/envconfig.sh'.
     
     - When asked to enter a name for new remote, you can chose any name you like. Also enter this 
       name in the variable REMOTECONFIG.
@@ -47,7 +47,7 @@ I will explain them in chronological order.
       You don't have to stay signed in. 
       Wait until the page tells you "Success!". Then go back to the console. 
     - Then you can basically just hit Enter until you are done.
-    - Going back to the envconfig.txt file, enter the name of your local storage device 
+    - Going back to the envconfig.sh file, enter the name of your local storage device
       in the variable LOCALSTORAGEDEVICENAME.
     - The remote storage will be mounted to '/mnt/pi/cloud' by default. 
       This can be changed if necessary. 

@@ -16,7 +16,7 @@ echo ""
 ############ Define Variables ###########
 
 # define variables
-CSBSYSCONFIG=~/csb/src/config/envconfig.txt
+CSBSYSCONFIG=~/csb/src/config/envconfig.sh
 
 
 echo "[ CAUTION ] "

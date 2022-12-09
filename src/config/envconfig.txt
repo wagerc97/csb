@@ -1,8 +1,8 @@
 ##################################################################################
-# envconfig.txt
+# envconfig.sh
 # This file stores environment variables for the cloud-storage-backup (CSB) project
 # Usage:
-#  - import variables with 'source ~/cloud-storage-backup/src/config/envconfig.txt'
+#  - import variables with 'source ~/cloud-storage-backup/src/config/envconfig.sh'
 #	 (bash will run this file like a .sh file and thus create the variables and 
 #    also execute everything that is written here)
 #  - variables that are defined here can then be used normally 

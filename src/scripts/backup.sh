@@ -17,7 +17,8 @@ echo ""
 ############ Define Variables ###########
 
 # import environment variables
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # log rclone copy to seperate file if TRUE
 if [ $LOGBACKUP -eq 0 ]; then
@@ -33,38 +34,6 @@ TIMESTAMP=$(date +"%Y-%m-%dT%H:%M:%S.%3N")
 SMALLTIMEOUT=1
 BIGTIMEOUT=5
 EXITCODE=0
-#########################################
-############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
-
-process_script_exitcode () {
-	# This function processes the exitcode of the last script execution
-	#
-	# Use it directly after the script execution as follows:
-	#	process_script_exitcode $?
-	#
-	# Parameters: 
-	#	the exitcode returned from script execution
-	
-	res=$1  # store the first parameters in a variable name 
-	#if [ $res -ne 0 ]; then 
-	#	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-	#	echo " [ERROR ]  returned exitcode '$res' "
-	#else 
-	#	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-	#	echo " [SUCCESS]  returned exitcode '$res' "
-	#fi 
-	#sleep $SMALLTIMEOUT
-	
-	echo "Result: $res "
-
-}
-
 #########################################
 
 printf_current_timestamp

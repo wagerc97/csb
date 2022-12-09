@@ -6,7 +6,8 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 ############ Define Variables ###########
 
 # import environment variables
-source ~/csb/src/config/envconfig.txt
+source ~/csb/src/config/envconfig.sh
+source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # process variables
 SMALLTIMEOUT=1
@@ -18,15 +19,6 @@ INTERVAL=5
 i=1
 echo ""
 #########################################
-############ Define Functions ###########
-
-printf_current_timestamp() { 
-	# This function prints the current timestamp without newline
-	printf $(date +"%Y-%m-%dT%H:%M:%S.%3N")
-}
-
-#########################################
-
 
 printf_current_timestamp
 echo " [NOTICE ] Check if USB storage is installed "
