@@ -2,10 +2,11 @@
 /shelf/
 /workspace.xml
 
-*/notes/*
-*/dump/*
-*/test/*
+/notes/
+/dump/
+/test/
 
 # dont sync any logfiles 
-*/logs/*
+/logs/
+
 
