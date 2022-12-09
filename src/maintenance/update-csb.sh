@@ -31,7 +31,7 @@ case $INPUT in
 ########################################################################
 	[yY][eE][sS]|[yY])
 		echo ""
-		echo "You answered '$INPUT'. Proceeding to update CSB installion... "
+		echo "You answered '$INPUT'. Proceeding to update CSB installation... "
 		echo ""
 
 		# change directory
