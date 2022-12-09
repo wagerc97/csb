@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------------------#
-# This bash script contains smaller reoccurring functions.
+# This bash script contains smaller reoccurring utility functions.
 # Part of the "cloud-storage-backup" project
 # Author: Clemens Wager
 # Last revisited: 2022-12-09
@@ -37,7 +37,8 @@ ensure_logfolder_structure () {
 	mkdir -pv ~/csb/logs/single/backup
 	sleep 1
 
-	echo "Modify execution permissions of CSB log folders"
+	printf_current_timestamp
+  echo " [NOTICE ] Modify execution permissions of CSB log folders"
  	chmod -R +x ~/csb/logs/
 
 }

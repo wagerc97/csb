@@ -19,7 +19,7 @@ I will explain them in chronological order.
 1.  Ensure the cloud-storage-backup root folder is located in your home directory. 
     This directory is typically called '/home/<username>' and 
     called '~' in short. 
-    Other wise download it from GitHub 
+    Otherwise download it from GitHub
     $ git clone https://github.com/wagerc97/cloud-storage-backup.git
     Do not forget to give the downloaded scripts the permission to be executed. 
     (this command will allow execution of all files in the directory recursively)
@@ -41,9 +41,9 @@ I will explain them in chronological order.
     Change the environment variables. Only two values necessary by default. The file holding all 
     environment variables is located under '~/cloud-storage-backup/src/config/envconfig.sh'.
     
-    - When asked to enter a name for new remote, you can chose any name you like. Also enter this 
+    - When asked to enter a name for new remote, you can choose any name you like. Also enter this
       name in the variable REMOTECONFIG.
-    - Then hit Enter until a browser window opens and you can sign in your cloud account.
+    - Then hit Enter until a browser window opens, and you can sign in your cloud account.
       You don't have to stay signed in. 
       Wait until the page tells you "Success!". Then go back to the console. 
     - Then you can basically just hit Enter until you are done.

@@ -65,7 +65,7 @@ MAXAGE=30
 # (DEFAULT) where to mount the remote storage (default=cloud) 
 REMOTEMOUNTDIR=/mnt/pi/cloud 
 
-# Location and name of mounted USB stick 
+# Location and name of mounted USB stick
 USBMOUNTDIR=/media/pi/$LOCALSTORAGEDEVICENAME
 
 
@@ -73,8 +73,9 @@ USBMOUNTDIR=/media/pi/$LOCALSTORAGEDEVICENAME
 #   RCLONE   #
 ##############
 
-# (DEFAULT) Local folder on local storage device. Rclone will store your data here(=destination)
-DESTDIR=/media/pi/$LOCALSTORAGEDEVICENAME/localbackup
+# (DEFAULT) Local folder where Rclone will store your data (=destination).
+# Note: named after your remote storage ID
+DESTDIR=/media/pi/$LOCALSTORAGEDEVICENAME/$REMOTECONFIG-backup
 
 # The Remote storage id as named in rclone.config (=source)
 # ... the ':' is necessary at the end
