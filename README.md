@@ -4,7 +4,7 @@ A set of scripts that use [Rclone](https://rclone.org/) to back up your cloud st
 Ideal for automated usage as backup service running on a server or use it on demand with one click.
 
 ## Purpose
-You do not have to worry about your remotely stored data to get lost, if you make backups from time to time. 
+You do not have to worry about your remotely stored data getting lost, if you make backups from time to time. 
 This project uses open-source software Rclone and a well documented set of Bash scripts to ease the process.  
 Easily configure this program to create backups of your remote storage (Google Drive, OneDrive, etc.) and store your cloud-based data locally whenever you want.  
 
