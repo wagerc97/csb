@@ -37,7 +37,7 @@ __Step 4:__ configure CSB installation acoording to manual
 
 __Check out the detailed [script documentation](/src/scripts/control) for each service to learn more!__
 
-### About [Rclone](https://rclone.org/#about) <img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="210" height="100" >
+### About [Rclone](https://rclone.org/#about) <img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="200" height="100" >
 
 [Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines Rclone as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)"  
 
