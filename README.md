@@ -34,7 +34,7 @@ __Step 2:__ Paste the command in a terminal session on your server and execute.
 [Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines Rclone as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)"  
 
 ### Credit
-Thanks [@pageauc](https://github.com/pageauc) for providing a nice Rclone installation repository [rclone4pi](https://github.com/pageauc/rclone4pi). It helped me to get into this topic. 
+Thanks [@pageauc](https://github.com/pageauc) for providing a nice Rclone installation repository ([rclone4pi](https://github.com/pageauc/rclone4pi)). It helped me to get into this topic. 
 
 ### Note 
 This is the first time I used shell scripts in a project, so I learned a lot along the way. If you encounter any mistakes please let me know and I will fix it in the repo ;-)
