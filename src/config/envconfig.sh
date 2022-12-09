@@ -19,7 +19,7 @@
 ##############
 
 # rclone configuration id of remote storage
-REMOTECONFIG=personalod
+REMOTECONFIG=odtest
 
 # Name of your local storage device 
 LOCALSTORAGEDEVICENAME=bigstick
