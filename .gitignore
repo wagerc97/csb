@@ -1,11 +1,11 @@
-# gitignore file these files will not be synced
+# Default ignored files
+/shelf/
+/workspace.xml
 
-# standard
 */notes
 */dump
 */test
 
 # dont sync any logfiles 
-/logs
+*/logs
 
-#
