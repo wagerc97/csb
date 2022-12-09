@@ -1,10 +1,15 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------------------#
-# Unmount the remote storage which the user provides. Note that the remtote storage must be configured in rclone. (see $rclone config for more information)
+# Purpose
+# This script will ask the user which configured remote storage ID ($REMOTECONFIG) should be un-mounted.
+# (execute `$rclone config` to check wich remote storages are configured)
 #
-# Dieses bash Skript überprüft die Verbindung zum externen Speicher (USB-Stick), zum Internet.
-# Dann wird der onedrive verbunden (rlcone stellt eine Verbindung zur Cloud her).
+# Warning
+# Execute this script only when NO OTHER CSB scripts are running!!!
+#
+# Recommended usage
+#Use this script on demand to un-mount a remote storage.
 #
 # Part of the "cloud-storage-backup" project
 # Author: Clemens Wager

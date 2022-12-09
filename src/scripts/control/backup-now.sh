@@ -1,14 +1,23 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------------------#
-# [CAUTION] This script is intended for on demand use. Execute whenever NO OTHER backup scripts are running!!!
-#  
-# This bash script will check the connectivity to the externale storage device and to the internet.
-# Then the remote storage (onedrive) will be connected (rclone mount) and all new files on the remote storage that have changed are copied to a local directory.
+# Purpose
+# This script will check the connectivity to your local (i.e. external) storage device and to the internet.
+# Then the remote storage (i.e. onedrive) will be un-mounted and mounted.
+# Then all changes on the remote storage are copied to a local directory.
 #
 # Dieses bash Skript überprüft die Verbindung zum externen Speicher (USB-Stick), zum Internet.
 # Dann wird der onedrive verbunden (rlcone stellt eine Verbindung zur Cloud her).
 # Zuletzt kopiert dieses bash Skript alle Datein, die verändert wurden, auf ein lokales Speichermedium (USB-stick, externe Festplatte, ... was auch immer konfiguriert wurde -> DESTDIR)
+#
+# Warning
+# - Execute this script only when NO OTHER CSB scripts are running!!!
+# - Files with the same name will be overwritten.
+#
+# Recommended usage
+# Use this script on demand to create a backup of the configured remote storage with on click.
+# Check the logs for information on the execution.
+#
 #
 # Part of the "cloud-storage-backup" project
 # Author: Clemens Wager

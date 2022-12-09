@@ -1,0 +1,81 @@
+INSTALLATION.txt
+===================
+
+1) English version
+2) Deutsche Version weiter unten 
+-----------------------------------------
+
+
+This is the installation guide for the CLOUD-STORAGE-BACKUP (CSB) PROJECT. If you're 
+reading this, you've probably just installed the project 
+on your system and want to install it.
+
+What should I do next?
+----------------------
+
+There are a view configurations required to use this installation.
+I will explain them in chronological order. 
+
+1.  Ensure the cloud-storage-backup root folder is located in your home directory. 
+    This directory is typically called '/home/<username>' and 
+    called '~' in short. 
+    Otherwise download it from GitHub
+    $ git clone https://github.com/wagerc97/cloud-storage-backup.git
+    Do not forget to give the downloaded scripts the permission to be executed. 
+    (this command will allow execution of all files in the directory recursively)
+    $ chmod -R +x ~/cloud-storage-backup/
+    
+2.  Install rclone on your system (in case you do not have it installed or
+    if this project installation does not do it for you automatically)
+    For installation on Raspberry Pi I recommend using this repo: https://github.com/pageauc/rclone4pi
+    Further information here: https://linuxhint.com/set-up-rclone-raspberry-pi/
+    
+3.  Configure rclone for your remote storage. This can be done by calling 
+    $ rclone config
+    in the console and following the commands. 
+
+    === Rclone Configuration ===
+
+    I recommend following these steps closely to avoid future troubles the following parameters 
+    during rclone configuration to be able to use most of the default environment variables. 
+    Change the environment variables. Only two values necessary by default. The file holding all 
+    environment variables is located under '~/cloud-storage-backup/src/config/envconfig.sh'.
+    
+    - When asked to enter a name for new remote, you can choose any name you like. Also enter this
+      name in the variable REMOTECONFIG.
+    - Then hit Enter until a browser window opens, and you can sign in your cloud account.
+      You don't have to stay signed in. 
+      Wait until the page tells you "Success!". Then go back to the console. 
+    - Then you can basically just hit Enter until you are done.
+    - Going back to the envconfig.sh file, enter the name of your local storage device
+      in the variable LOCALSTORAGEDEVICENAME.
+    - The remote storage will be mounted to '/mnt/pi/cloud' by default. 
+      This can be changed if necessary. 
+
+ 
+5.  Ensure you have the (physical) external storage that you configured in the environment 
+    variables plugged in correctly. Also make sure it has enough storage capacity.
+    Check that it is compatible with your system (the program checks it as well later). 
+    
+6.  Installation complete :-)
+
+
+
+What do I do if it doesn't work?
+--------------------------------
+
+ 1. Read the logfiles located under '~/cloud-storage-backup/logs/'. You will most likely be looking in 
+    control directory. 
+ 2. Only after 1. call Clemens Wager or write an Email to wagerc-dev@outlook.com 
+    (I may or may not read it)
+
+
+
+Logs are your best friend :)
+
+
+============================================================================================================
+
+
+Deutsche Version: ... 
+

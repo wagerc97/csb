@@ -1,10 +1,20 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------------------#
-# Check connectivity of system to ensure that all requirements for backup are met.
+#### Purpose
+# This script will check the connectivity to your local (i.e. external) storage device and to the internet.
+# Then the remote storage (i.e. onedrive) will be un-mounted and mounted. NO BACKUP will be created.
 #
 # Dieses bash Skript überprüft die Verbindung zum externen Speicher (USB-Stick), zum Internet.
 # Dann wird der onedrive verbunden (rlcone stellt eine Verbindung zur Cloud her).
+#
+# Warning
+# Execute this script only when NO OTHER CSB scripts are running!!!
+#
+#### Recommended usage
+# Use this script on demand when you want to confirm that the system is configured correctly.
+# If successful the next backup should work without any major issues.
+# Check the logs for information on the execution.
 #
 # Part of the "cloud-storage-backup" project
 # Author: Clemens Wager
