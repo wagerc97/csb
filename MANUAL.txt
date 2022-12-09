@@ -50,10 +50,14 @@ There are a view possibilities:
     
 @MAINTENANCE:
     
-    You can perform system checks to see whether the installation is ready for your next 
-    backup process. In this case run '~/cloud-storage-backup/src/scripts/control/system-check-for-backup.sh'
-    This will basically execute all scripts except the backup.sh itself.
-    
+    1) You can perform system checks to see whether the installation is ready for your next 
+       backup process. In this case run '~/cloud-storage-backup/src/scripts/control/system-check-for-backup.sh'
+       This will basically execute all small scripts except the backup.sh itself.
+    2) You can update your CSB installation by running the following script
+       $ ~/csb/src/maintenance/update-csb.sh
+       This script deletes the CSB installation and clones the uptodate version from wagerc97 GitHub repo.
+       CAUTION: you will need to reconfigure a view environment variables afterwards.
+
 
 # CAUTION!
 Your local storage may run full at some point as all changes will be saved.
