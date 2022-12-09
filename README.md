@@ -23,8 +23,9 @@ You will need:
 - good documentation
 
 ### About [Rclone](https://rclone.org/#about)
-![alt text](https://rclone.org/img/logo_on_light__horizontal_color.svg)
-[Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines Rclone as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)" 
+<img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="150" height="100">
+[Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines Rclone as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)"  
+
 
 ### Note: 
 I used shell scripts for the first time in a larger project, so I learned a lot along the way. If you encounter any mistakes please let me now ;)
