@@ -59,13 +59,13 @@ case $INPUT in
 		mkdir -pv ~/csb/logs/control/systemcheck
 		mkdir -pv ~/csb/logs/control/daily
 		mkdir -pv ~/csb/logs/control/ondemand
-		mkdir -pv ~/csb/logs/control/reboot
-		mkdir -pv ~/csb/logs/single
-	  mkdir -pv ~/csb/logs/single/check-web
-	  mkdir -pv ~/csb/logs/single/check-usb
-	  mkdir -pv ~/csb/logs/single/unmount
-	  mkdir -pv ~/csb/logs/single/mount
-	  mkdir -pv ~/csb/logs/single/backup
+        mkdir -pv ~/csb/logs/control/reboot
+        mkdir -pv ~/csb/logs/single
+        mkdir -pv ~/csb/logs/single/check-web
+        mkdir -pv ~/csb/logs/single/check-usb
+        mkdir -pv ~/csb/logs/single/unmount
+        mkdir -pv ~/csb/logs/single/mount
+        mkdir -pv ~/csb/logs/single/backup
 		sleep 1
 
 		# give permission to scripts
