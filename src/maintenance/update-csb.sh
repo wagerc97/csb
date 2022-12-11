@@ -45,8 +45,10 @@ case $INPUT in
 
 		sleep 2
 
-		# git clone
-		git clone https://github.com/wagerc97/csb.git
+		# git clone from main branch (default branch that works)
+		git clone --branch main https://github.com/wagerc97/csb.git
+		# Only for DEVELOPMENT
+		#git clone --branch develop https://github.com/wagerc97/csb.git
 
 		sleep 2
 		# Ensure log folders exist otherwise create them
