@@ -52,20 +52,20 @@ case $INPUT in
 
 		sleep 2
 		# Ensure log folders exist otherwise create them
-    echo "Ensure all log folders exist "
-    mkdir -pv ~/csb/logs
-    mkdir -pv ~/csb/logs/control
-    mkdir -pv ~/csb/logs/control/main
-    mkdir -pv ~/csb/logs/control/systemcheck
-    mkdir -pv ~/csb/logs/control/daily
-    mkdir -pv ~/csb/logs/control/ondemand
-    mkdir -pv ~/csb/logs/control/reboot
-    mkdir -pv ~/csb/logs/single
-    mkdir -pv ~/csb/logs/single/check-web
-    mkdir -pv ~/csb/logs/single/check-usb
-    mkdir -pv ~/csb/logs/single/unmount
-    mkdir -pv ~/csb/logs/single/mount
-    mkdir -pv ~/csb/logs/single/backup
+        echo "Ensure all log folders exist "
+        mkdir -pv ~/csb/logs
+        mkdir -pv ~/csb/logs/control
+        mkdir -pv ~/csb/logs/control/main
+        mkdir -pv ~/csb/logs/control/systemcheck
+        mkdir -pv ~/csb/logs/control/daily
+        mkdir -pv ~/csb/logs/control/ondemand
+        mkdir -pv ~/csb/logs/control/reboot
+        mkdir -pv ~/csb/logs/single
+        mkdir -pv ~/csb/logs/single/check-web
+        mkdir -pv ~/csb/logs/single/check-usb
+        mkdir -pv ~/csb/logs/single/unmount
+        mkdir -pv ~/csb/logs/single/mount
+        mkdir -pv ~/csb/logs/single/backup
 		sleep 1
 
 		# give permission to scripts
