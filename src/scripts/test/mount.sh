@@ -105,28 +105,66 @@ else
 	#rclone -vvv mount $REMOTECONFIG: $REMOTEMOUNTDIR  # <- this one works
 		
 	#--------------------------------------------------------------#
-    # Credit: Thanks to animosity22
-    # https://github.com/animosity22/homescripts/blob/master/systemd/rclone-drive.service
+  # Credit: Thanks to animosity22
+  # https://github.com/animosity22/homescripts/blob/master/systemd/rclone-drive.service
 
 	rclone -vvv mount $REMOTECONFIG: $REMOTEMOUNTDIR \
-	--config $RCLONECONFIG \
+	#--config $RCLONECONFIG \
+	#
+	# This is for allowing users other than the user running rclone access to the mount
     --allow-other \
+    # Google Drive is a polling remote so this value can be set very high and any changes are detected via polling.
+    # One Drive idk
     --dir-cache-time 5000h \
+    # Log file location
     --log-file $MOUNTLOGFILE \
+    # Set the log level
+    #--log-level NOTICE \
+    # I reduce the poll interval down to 1 min as this makes changes appear fast the API quotas per day are huge (was 10s)
+    # WARNING: this will crash the script
+    #--poll-interval 1m \
+    # This is setting the file permission on the mount to user and group have the same access and other can read
+    #--umask 002 \
+    # Please set this to your own value below
+    #--user-agent someappname101 \
+    #
+    # This sets up the remote control daemon so you can issue rc commands locally
     --rc \
+    # This is the default port it runs on
     --rc-addr 127.0.0.1:5572 \
+    # no-auth is used as no one else uses my server and it is not a shared seedbox
     --rc-no-auth \
+    # The local disk used for caching
     --cache-dir=/tmp/cache \
+    #
+    # My quota per user / per 100 seconds is 20,000 requests. This can be found in your quota section.
+    # This changes the sleep calls to something much lower to take advantage of the API boost.
+    # change the min sleep from 100ms
     --drive-pacer-min-sleep 10ms \
+    # Changing to have the ability to burst higher
     --drive-pacer-burst 200 \
+    # This is used for caching files to local disk for streaming
+    # Not: I originally used writes  # --vfs-cache-mode writes \
     --vfs-cache-mode full \
+    # This limits the cache size to the value below
     --vfs-cache-max-size 250G \
+    # This limits the age in the cache if the size is reached and it removes the oldest files first
     --vfs-cache-max-age 5000h \
+    # The polling interval for increased based on there is enough buffer space
+    #--vfs-cache-poll-interval 5m \
+    # This sets a per file bandwidth control and I limit this to a little bigger than my largest bitrate I'd want to play
     --bwlimit-file 32M \
+    # if a filename not found, find a case insensitive match -> less troubles
+    --vfs-case-insensitive \
+    # cannot change anything on remote source
     --read-only \
+    #	process runs in background (allows closing terminal without problems)
     --daemon \
+    # time for process to report back
     --daemon-timeout=10m \
+    # retries the whole sync that many times before giving up
     --retries 3 \
+    # rclone tries each API call that many times before giving up
     --low-level-retries 3
 	
 	#--------------------------------------------------------------#
