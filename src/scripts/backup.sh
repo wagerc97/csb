@@ -21,9 +21,10 @@ source ~/csb/src/config/envconfig.sh
 source ~/csb/src/scripts/utility/smallfunctions.sh
 
 # log rclone copy to seperate file if TRUE
-if [ $LOGBACKUP -eq 0 ]; then
+if [ $LOGCOPY -eq 0 ]; then
 	ts=$(date +"%Y-%m-%dT%H:%M:%S")
 	COPYLOGFILE=$PROJECTLOGSSINGLE/backup/copy_details-$ts.log
+	# create the logfile
 	touch $COPYLOGFILE
 else 
 	COPYLOGFILE=""
