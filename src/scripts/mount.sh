@@ -109,7 +109,8 @@ else
     --bwlimit-file 32M \
     --read-only \
     --retries 3 \
-    --low-level-retries 3
+    --low-level-retries 3 \
+    --daemon
 	
 	#--------------------------------------------------------------#
 	
