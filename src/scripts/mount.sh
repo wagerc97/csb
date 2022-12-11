@@ -15,7 +15,7 @@ BIGTIMEOUT=20
 EXITCODE=1
 MOUNTED=1  # default to FALSE
 INTERVAL=10
-ATTEMPTS=10
+ATTEMPTS=3
 i=1
 echo ""
 #########################################
@@ -99,7 +99,6 @@ else
 
 	rclone -vvv mount $REMOTECONFIG: $REMOTEMOUNTDIR \
 	--config $RCLONECONFIG \
-    --allow-other \
     --dir-cache-time 5000h \
     --cache-dir=/tmp/cache \
     --drive-pacer-min-sleep 10ms \
@@ -109,8 +108,6 @@ else
     --vfs-cache-max-age 5000h \
     --bwlimit-file 32M \
     --read-only \
-    --daemon \
-    --daemon-timeout=10m \
     --retries 3 \
     --low-level-retries 3
 	
