@@ -113,9 +113,6 @@ else
     --allow-other \
     --dir-cache-time 5000h \
     --log-file $MOUNTLOGFILE \
-    --rc \
-    --rc-addr 127.0.0.1:5572 \
-    --rc-no-auth \
     --cache-dir=/tmp/cache \
     --drive-pacer-min-sleep 10ms \
     --drive-pacer-burst 200 \
