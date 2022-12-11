@@ -13,7 +13,7 @@ source ~/csb/src/scripts/utility/smallfunctions.sh
 # log rclone copy to seperate file if TRUE
 if [ $LOGMOUNT -eq 0 ]; then
 	ts=$(date +"%Y-%m-%dT%H:%M:%S")
-	MOUNTLOGFILE=$PROJECTLOGSSINGLE/backup/copy_details-$ts.log
+	MOUNTLOGFILE=$PROJECTLOGSSINGLE/mount/mount_details-$ts.log
 	# create the logfile
 	touch $MOUNTLOGFILE
 else
