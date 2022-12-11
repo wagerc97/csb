@@ -45,10 +45,6 @@ LOCALSTORAGEDEVICENAME=bigstick
 #  BOOLEANS  #
 ##############
 
-# (DEFAULT) Boolean indicates if rclone mount logs individually in $PROJECTLOGSSINGLE/mount/mount_details-<ts>.log (default=TRUE)
-# 0 == TRUE  ;  1 == FALSE
-LOGMOUNT=1
-
 # (DEFAULT) Boolean indicates if rclone copy logs individually in $PROJECTLOGSSINGLE/backup/copy_details-<ts>.log (default=TRUE)
 # 0 == TRUE  ;  1 == FALSE
 LOGCOPY=0

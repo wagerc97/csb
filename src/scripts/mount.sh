@@ -9,17 +9,6 @@ echo $(basename "$0") "|" $(date +"%Y-%m-%dT%H:%M:%S.%3N")
 source ~/csb/src/config/envconfig.sh
 source ~/csb/src/scripts/utility/smallfunctions.sh
 
-
-# log rclone copy to seperate file if TRUE
-if [ $LOGMOUNT -eq 0 ]; then
-	ts=$(date +"%Y-%m-%dT%H:%M:%S")
-	MOUNTLOGFILE=$PROJECTLOGSSINGLE/mount/mount_details-$ts.log
-	# create the logfile
-	touch $MOUNTLOGFILE
-else
-	MOUNTLOGFILE=""
-fi
-
 # process variables
 SMALLTIMEOUT=2
 BIGTIMEOUT=20
@@ -112,7 +101,6 @@ else
 	--config $RCLONECONFIG \
     --allow-other \
     --dir-cache-time 5000h \
-    --log-file $MOUNTLOGFILE \
     --cache-dir=/tmp/cache \
     --drive-pacer-min-sleep 10ms \
     --drive-pacer-burst 200 \
