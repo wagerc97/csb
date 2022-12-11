@@ -94,8 +94,7 @@ else
 	#rclone -vvv mount $REMOTECONFIG: $REMOTEMOUNTDIR  # <- this one works
 		
 	#--------------------------------------------------------------#
-    # Credit: Thanks to animosity22
-    # https://github.com/animosity22/homescripts/blob/master/systemd/rclone-drive.service
+# todo: adapt chunk size 
 
 	rclone -vvv mount $REMOTECONFIG: $REMOTEMOUNTDIR \
 	--config $RCLONECONFIG \
@@ -119,13 +118,14 @@ fi
 
 
 
-# Look for check-file in mounted storage
+
 # Loop implemented to wait until remote storage connection is live
 printf_current_timestamp
 echo " [NOTICE ] Check if mount was successful for $ATTEMPTS times every $INTERVAL seconds "
 printf_current_timestamp
 echo " [NOTICE ] Check if directory $REMOTEMOUNTDIR is empty "
 
+# Check if any files are visible on the mounted remote storage
 while [ $i -le $ATTEMPTS ]; do
 	printf_current_timestamp
 	echo " [NOTICE ] Attempt: $i/$ATTEMPTS "
