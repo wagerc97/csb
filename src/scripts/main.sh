@@ -149,7 +149,7 @@ process_script_exitcode $?
 # The script backup.sh will copy all files on the remote storage (onedrive) that changed to a local directory
  
 printf_current_timestamp
-echo " [NOTICE ] Backup data on remote storage "
+echo " [NOTICE ] Create backup of remote storage "
 
 call_bash_script_and_log_centrally backup
 process_script_exitcode $?
