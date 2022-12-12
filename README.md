@@ -16,7 +16,7 @@ You will need:
 - [Rclone installation](https://rclone.org/install/)
 - cronjob configuration
 
-More details about the installation of the CSB service can be read in the [installation](/howto/INSTALLATION.txt).
+More details about the installation of the CSB service can be read in the [installation](/howto/INSTALLATION.txt) guideline.
 
 Note: This service was originally developed for Raspberry Pi. But any Linux/Unix system should be able to use it as intended.
 
@@ -26,7 +26,7 @@ __Step 1:__ Highlight and copy the command below.
 
 __Step 2:__ Paste the command in a terminal session on your server and execute.  
 __Step 3:__ [install Rclone](https://rclone.org/install/) in your home directory     
-__Step 4:__ configure CSB installation according to [manual](/howto/MANUAL.txt)   
+__Step 4:__ configure CSB installation according to [INSTALLATION](/howto/INSTALLATION.txt)   
 
 ## Details
 ### Developed with focus on:
