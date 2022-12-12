@@ -16,14 +16,14 @@ What should I do next?
 There are a view configurations required to use this installation.
 I will explain them in chronological order. 
 
-1.  Ensure the cloud-storage-backup root folder is located in your home directory. 
+1.  Ensure the csb root folder is located in your home directory. 
     This directory is typically called '/home/<username>' and 
     called '~' in short. 
     Otherwise download it from GitHub
-    $ git clone https://github.com/wagerc97/cloud-storage-backup.git
+    $ git clone https://github.com/wagerc97/csb.git
     Do not forget to give the downloaded scripts the permission to be executed. 
     (this command will allow execution of all files in the directory recursively)
-    $ chmod -R +x ~/cloud-storage-backup/
+    $ chmod -R +x ~/csb/
     
 2.  Install rclone on your system (in case you do not have it installed or
     if this project installation does not do it for you automatically)
@@ -39,7 +39,7 @@ I will explain them in chronological order.
     I recommend following these steps closely to avoid future troubles the following parameters 
     during rclone configuration to be able to use most of the default environment variables. 
     Change the environment variables. Only two values necessary by default. The file holding all 
-    environment variables is located under '~/cloud-storage-backup/src/config/envconfig.sh'.
+    environment variables is located under '~/csb/src/config/envconfig.sh'.
     
     - When asked to enter a name for new remote, you can choose any name you like. Also enter this
       name in the variable REMOTECONFIG.
@@ -51,7 +51,6 @@ I will explain them in chronological order.
       in the variable LOCALSTORAGEDEVICENAME.
     - The remote storage will be mounted to '/mnt/pi/cloud' by default. 
       This can be changed if necessary. 
-
  
 5.  Ensure you have the (physical) external storage that you configured in the environment 
     variables plugged in correctly. Also make sure it has enough storage capacity.
@@ -64,7 +63,7 @@ I will explain them in chronological order.
 What do I do if it doesn't work?
 --------------------------------
 
- 1. Read the logfiles located under '~/cloud-storage-backup/logs/'. You will most likely be looking in 
+ 1. Read the logfiles located under '~/csb/logs/'. You will most likely be looking in 
     control directory. 
  2. Only after 1. call Clemens Wager or write an Email to wagerc-dev@outlook.com 
     (I may or may not read it)
