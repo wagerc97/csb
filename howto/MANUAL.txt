@@ -26,7 +26,7 @@ There are a view possibilities:
 
 !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!  !!! ATTENTION !!!
 
-  Do not execute the cloud-storage-backup scripts while other cloud-storage-backup scripts are running. 
+  Do not execute the CSB scripts while other CSB scripts are running. 
   Whether it is because you started them twice or because a cronjob started automatically. 
   The resulting behaviour was not tested and I won't take responsibility for the outcome. 
 
@@ -36,7 +36,7 @@ There are a view possibilities:
 
 @ONDEMAND:
 
-    Start one of the scripts in '~/cloud-storage-backup/src/scripts/control' which carries out the 
+    Start one of the scripts in '~/csb/src/scripts/control' which carries out the 
     required procedure. All controlling scripts are well explained inside. 
     (I don't recommend using any of the other scripts by themselves)
 
@@ -51,14 +51,14 @@ There are a view possibilities:
 @MAINTENANCE:
     
     1) You can perform system checks to see whether the installation is ready for your next 
-       backup process. In this case run '~/cloud-storage-backup/src/scripts/control/system-check-for-backup.sh'
+       backup process. In this case run '~/csb/src/scripts/control/system-check-for-backup.sh'
        This will basically execute all small scripts except the backup.sh itself.
     2) You can update your CSB installation by running the following script
        $ ~/csb/src/maintenance/update-csb.sh
        This script deletes the CSB installation and clones the uptodate version from wagerc97 GitHub repo.
        CAUTION: you will need to reconfigure a view environment variables afterwards.
     3) I highly recommend to implementing a scheduled task (i.e. Cronjob) to delete old logs.
-       Just for this issue the script '/src/scripts/decimate-logs.sh' was written. Also, there is a variable in
+       Just for this issue the script '~/csb/src/scripts/decimate-logs.sh' was written. Also, there is a variable in
        envconig.sh called 'MAXAGE=30' that indicates after how many days a logfile shall be deleted.
 
 
@@ -66,7 +66,7 @@ There are a view possibilities:
 Your local storage may run full at some point as all changes will be saved.
 Allthough not the complete remote storage directory is saved. 
     
-# Notes
+# NOTE
  - There is a script that deletes old logfiles (by default the ones older than 30 days).
    You can configure it to run i.e. every Friday at midnight.
     
@@ -77,7 +77,7 @@ Allthough not the complete remote storage directory is saved.
 What do I do if it doesn't work?
 --------------------------------
 
- 1. Read the logfiles located under '~/cloud-storage-backup/logs/'. You will most likely be looking in 
+ 1. Read the logfiles located under '~/csb/logs/'. You will most likely be looking in 
     control directory. 
  2. Only after 1. call Clemens Wager or write an Email to wagerc-dev@outlook.com 
     (I may or may not read it)
