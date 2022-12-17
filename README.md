@@ -8,18 +8,6 @@ You do not have to worry about your remotely stored data getting lost, if you ma
 This project uses open-source software Rclone and a well documented set of Bash scripts to ease the process.  
 Easily configure this program to create backups of your remote storage (Google Drive, OneDrive, etc.) and store your cloud-based data locally whenever you want.  
 
-## Requirements
-Use for example cronjobs to trigger the according scripts (see [manual](/howto/MANUAL.txt)) and save any changes on your cloud storage automatically. 
-There is an [example crontab file](/src/maintenance/example-crontab.txt) with recommended cronjobs.  
-You will need: 
-- linux server
-- [Rclone installation](https://rclone.org/install/)
-- cronjob configuration
-
-More details about the installation of the CSB service can be read in the [installation](/howto/INSTALLATION.txt) guideline.
-
-Note: This service was originally developed for Raspberry Pi. But any Linux/Unix system should be able to use it as intended.
-
 ## Quick Install
 __Step 1:__ Highlight and copy the command below.    
 ``cd ~ | git clone https://github.com/wagerc97/cloud-storage-backup.git``   
@@ -36,12 +24,27 @@ __Step 4:__ configure CSB installation according to [INSTALLATION](/howto/INSTAL
 
 __Check out the detailed [script documentation](/src/scripts/control) for each service to learn more!__
 
+## Recommended use case
+### Automated backup service
+Use for example cronjobs to trigger the according scripts (see [manual](/howto/MANUAL.txt)) and save any changes on your cloud storage automatically. 
+There is an [example crontab file](/src/maintenance/example-crontab.txt) with recommended cronjobs.  
+You will need: 
+- linux system
+- [Rclone installation](https://rclone.org/install/)
+- cronjob configuration
+
+More details about the installation of the CSB service can be read in the [installation](/howto/INSTALLATION.txt) guideline.
+
+Note: This service was originally developed for Raspberry Pi. But any Linux/Unix system should be able to use it as intended.
+
+## About 
+
 <img align="right" src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="200" height="100" >
 
-### About Rclone 
+### Rclone 
 [Wikipedia](https://en.wikipedia.org/wiki/Rclone) defines [Rclone](https://rclone.org/#about) as "an open source, multi threaded, command line computer program to manage or migrate content on cloud and other high latency storage. (...)"  
 
-### Credit
+### Acknowledgement
 Thanks [@pageauc](https://github.com/pageauc) for providing a nice Rclone installation repository ([rclone4pi](https://github.com/pageauc/rclone4pi)). It helped me to get into this topic. 
 
 ### Note 
