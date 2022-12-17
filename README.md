@@ -1,4 +1,4 @@
-# Cloud Storage Backup (CSB)
+# Cloud Storage Backup (CSB) Service
 ## In short
 A set of scripts that use [Rclone](#about-rclone) to back up your cloud storage to a local storage device. 
 Ideal for automated usage as backup service running on a server or use it on demand with one click.
