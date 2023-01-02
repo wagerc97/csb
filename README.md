@@ -10,7 +10,7 @@ Easily configure this program to create backups of your remote storage (Google D
 
 ## Quick Install
 __Step 1:__ Highlight and copy the command below.    
-``cd ~ | git clone https://github.com/wagerc97/cloud-storage-backup.git``   
+``cd ~ | git clone https://github.com/wagerc97/csb.git``   
 
 __Step 2:__ Paste the command in a terminal session on your server and execute.  
 __Step 3:__ [install Rclone](https://rclone.org/install/) in your home directory     
